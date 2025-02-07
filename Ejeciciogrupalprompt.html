@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de JavaScript</title>
+    <style>
+        button.boton-accionable {
+            padding: 10px;
+            margin: 10px;
+            background-color: #1840845d;
+            color: azure;
+            border-color: #184084f2;
+        }
+
+        button.boton-accionable:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px white;
+            cursor: pointer;
+        }
+
+        body {
+            background-color: grey;
+        }
+    </style>
+    <script>
+        function calcularEdad() {
+            let anioNacimiento = prompt("Ingrese su año de nacimiento");
+            let anioActual = new Date().getFullYear();
+            let edad = anioActual - anioNacimiento;
+            alert(`Tienes ${edad} años.`);
+        }
+
+        function puedeVotar() {
+            let edad = prompt("Ingrese su edad");
+            if (edad >= 18) {
+                alert("Puedes votar.");
+            } else {
+                alert("No puedes votar.");
+            }
+        }
+
+        //Muestra un alert() indicando si numero es par o impar
+        function verificarNumeroPares() {
+            const verificar = prompt("Ingrese un numero")
+            const resultado = verificar % 2 === 0 ? "Numero par" : "Numero inpar";
+            let mensaje = resultado;
+            alert(mensaje);
+        }
+
+        //Muestra un alert() indicando si la edad es mayor o igual que 18 puede conducir
+        function puedeConducir() {
+            let edad = prompt("Ingrese su edad");
+            if (edad >= 18) {
+                alert("Puedes conducir.");
+            } else {
+                alert("No puedes conducir.");
+            }
+        }
+
+        //Muestra un alert() indicando si los numeros comparados son 
+        function compararNumeros() {
+            let num1 = prompt("Ingrese un numero");
+            let num2 = prompt("Ingrese otro numero");
+            if (num1 > num2) {
+                alert(num1 + " es mayor que " + num2)
+            } else if (num1 < num2) {
+                alert(num1 + " es menor que " + num2)
+            } else {
+                alert(num1 + " es igual que " + num2)
+            }
+        }
+
+        //Muestra un alert() indicando la estacion del año para un mes del año dado
+        // 1-3 Primavera
+        // 4-6 Verano
+        // 7-10 - Otoño
+        // 10-12 Invierno
+        function estacionDelAnio() {
+            let mes = prompt("Ingrese un mes del año");
+            if (mes >= 1 && mes <= 3) {
+                alert("Primavera");
+            } else if (mes >= 4 && mes <= 6) {
+                alert("Verano");
+            } else if (mes >= 7 && mes <= 10) {
+                alert("Otoño");
+            } else if (mes >= 10 && mes <= 12) {
+                alert("Invierno");
+            } else {
+                alert("Y eso es un mes abusador?")
+            }
+        }
+
+        //Muestra un alert() indicando la conversion de celsius a fahrenheit
+        function convertirTemperatura() {
+            let celsius = prompt("Ingrese la temperatura en grados celsius");
+            f = celsius * 1.8 + 32;
+            alert(celsius + " grados celsius son " + f + " grados fahrenheit");
+
+        }
+
+        //Muestra un alert() a partir del dia de la semana mostrar el dia seleccionado
+        function determinarDiaSemana(numero) {
+            let semana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+            alert(semana[numero]);
+        }
+
+        //Muestra un alert() con un numero aleatoria
+        function generarNumeroAleatorio() {
+            let numero = Math.random() + 1;
+            alert(numero)
+        }
+
+        //Muestra un alert() indicando si un numero es positivo o negativo
+        function determinarPositivoNegativo() {
+            let numero = prompt("Ingrese un numero");
+            if (numero > 0) {
+                alert(numero + " Es Positivo")
+            } else if (numero < 0) {
+                alert(numero + " Es Negativo")
+            } else {
+                alert(numero + " Es cero")
+            }
+        }
+
+        //Imprime console.log() la tabla de multiplicar de un numero
+        function imprimirTablaMultiplicar() {
+            let numero = prompt("Ingrese un numero");
+            for (let i = 1; i <= 10; i++) {
+                let num = i * numero
+                document.write(num + "<br>");
+            }
+        }
+    </script>
+</head>
+
+<body id="ejercicio-practico-js">
+    <h1>Ejercicios de JavaScript</h1>
+    <button class="boton-accionable" onclick="calcularEdad(2000)">Calcular Edad</button>
+    <button class="boton-accionable" onclick="verificarNumeroPares(10)">Verificar Número Par/Impar</button>
+    <button class="boton-accionable" onclick="puedeConducir(18)">Verificar Permiso de Conducción</button>
+    <button class="boton-accionable" onclick="compararNumeros(8, 12)">Comparar Dos Números</button>
+    <button class="boton-accionable" onclick="estacionDelAnio(7)">Determinar Estación del Año</button>
+    <button class="boton-accionable" onclick="puedeVotar(17)">Verificar Permiso para Votar</button>
+    <button class="boton-accionable" onclick="determinarDiaSemana(2)">Determinar Día de la Semana</button>
+    <button class="boton-accionable" onclick="generarNumeroAleatorio()">Generar Número Aleatorio</button>
+    <button class="boton-accionable" onclick="determinarPositivoNegativo(-10)">Determinar Positivo o Negativo</button>
+    <button class="boton-accionable" onclick="convertirTemperatura(25)">Convertir Temperatura</button>
+    <button class="boton-accionable" onclick="imprimirTablaMultiplicar(5)">Imprimir Tabla de Multiplicar</button>
+</body>
+
+
+
+</html>
