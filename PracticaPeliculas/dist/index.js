@@ -41,13 +41,13 @@ const rl = readline.createInterface({
 });
 function showMenu() {
     console.log(`
-    ============================= Menu de Peliculas=================================
+    ============================= Menu de Peliculas =================================
     1. Listar Peliculas
     2. Agregar Peliculas
     3. Marcar Pelicula como vista
     4. Editar nombre de la pelicula
     5. Editar director de la pelicula
-    5. Salir        
+    6. Salir        
         `);
 }
 function handleUserChoice(choice) {
@@ -118,7 +118,7 @@ function handleUserChoice(choice) {
                 });
             });
             break;
-        case "5":
+        case "6":
             console.log("Saliendo del programa....");
             rl.close();
             break;

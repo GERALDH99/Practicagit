@@ -86,7 +86,7 @@ function handleUserChoice(choice: string) {
                 });
             });
             break;
-        case "5":
+        case "6":
             console.log("Saliendo del programa....");
             rl.close();
             break;
@@ -95,7 +95,7 @@ function handleUserChoice(choice: string) {
                        break;
                     
     }
-    
+   
 }
 
 
